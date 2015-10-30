@@ -1,0 +1,25 @@
+<!--
+  Copyright (c) 2015, <your name>. All rights reserved. Use of this source code
+  is governed by a BSD-style license that can be found in the LICENSE file.
+-->
+
+<dom-module id="main-app">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+      icon-toggle[toggle-icon="favorite"] {
+        --icon-toggle-color: lightgrey;
+        --icon-toggle-outline-color: black;
+        --icon-toggle-pressed-color: red;
+      }
+    </style>
+    <h3>Statically-configured icon-toggles</h3>
+    <icon-toggle toggle-icon="star"></icon-toggle>
+    <icon-toggle toggle-icon="star" pressed></icon-toggle>
+    <h3>Data-bound icon-toggle</h3>
+    <div>{{message(isFav)}}</div>
+    <icon-toggle toggle-icon="favorite" pressed="{{isFav}}"></icon-toggle>
+  </template>
+</dom-module>
